@@ -1,0 +1,15 @@
+[user]
+	name = Hiroaki Asano
+	email = test@test.com
+[alias]
+	co = checkout
+	st = status -sb
+	ci  = commit
+  b = branch
+	l  = log --decorate
+[core]
+	editor = vi
+[color]
+	diff = auto
+	status = auto
+	status = auto
