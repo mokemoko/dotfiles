@@ -4,13 +4,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "Bundle 'YankRing.vim'
-"Bundle 'EasyMotion'
+"Bundle 'vim-ruby/vim-ruby'
+"Bundle 'tpope/vim-rails'
+"Bundle 'scrooloose/syntastic'
+Bundle 'neocomplcache'
 Bundle 'taglist.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'scrooloose/syntastic'
 Bundle 'project.tar.gz'
-"Bundle 'neocomplcache'
 Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
@@ -27,8 +26,6 @@ set ts=2 sw=2 sts=2
 set incsearch
 set ignorecase
 set smartcase
-
-set tags=~/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/rails.tags
 
 "neocomplcache設定
 let g:neocomplcache_enable_at_startup = 1
@@ -48,8 +45,9 @@ let g:neocomplcache_enable_underbar_completion = 1
 " シンタックスをキャッシュするときの最小文字長
 let g:neocomplcache_min_syntax_length = 5
 
-let g:yankring_manual_clipboard_check = 0
-let ruby_space_errors = 1
+"set tags=~/.rvm/gems/ruby-1.9.3-p125@rails3tutorial2ndEd/rails.tags
+"let g:yankring_manual_clipboard_check = 0
+"let ruby_space_errors = 1
 let Tlist_Use_Horiz_Window = 1
 
 nmap <Space>b :ls<CR>:buffer
