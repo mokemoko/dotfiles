@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc'
 Plugin 'hotchpotch/perldoc-vim'
+Plugin 'git://github.com/fuenor/qfixhowm'
 
 call vundle#end()
 filetype plugin indent on
