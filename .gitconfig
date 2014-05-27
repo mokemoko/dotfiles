@@ -8,7 +8,7 @@
   b = branch
 	l  = log --decorate
 [core]
-	editor = vi
+	editor = vim
 [color]
 	diff = auto
 	status = auto

@@ -46,3 +46,13 @@ function! s:Jq(...)
     endif
     execute "%! jq " . l:arg
 endfunction
+
+" QFixHown
+let QFixHowm_Key = 'g'
+let howm_dir             = '~/Dropbox/howm'
+let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
+let howm_fileencoding    = 'utf-8'
+let howm_fileformat      = 'unix'
+let QFixWin_EnableMode = 1
+let QFixHowm_HolidayFile = '~/.vim/bundle/qfixhowm/misc/holiday/Sche-Hd-0000-00-00-000000.utf8'
+set timeout timeoutlen=3000 ttimeoutlen=100
