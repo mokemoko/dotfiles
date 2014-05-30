@@ -1,5 +1,5 @@
 [http]
-  sslVeryfy = false
+  sslVerify = false
 [user]
 	name = mokemoko
 	email = mokemoko331@gmail.com
