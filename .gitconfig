@@ -1,11 +1,13 @@
+[http]
+  sslVeryfy = false
 [user]
 	name = mokemoko
 	email = mokemoko331@gmail.com
 [alias]
 	co = checkout
 	st = status -sb
-	ci  = commit
-  b = branch
+	ci = commit
+  b  = branch
 	l  = log --decorate
 [core]
 	editor = vim
