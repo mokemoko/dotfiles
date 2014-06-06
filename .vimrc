@@ -56,3 +56,6 @@ let howm_fileformat      = 'unix'
 let QFixWin_EnableMode = 1
 let QFixHowm_HolidayFile = '~/.vim/bundle/qfixhowm/misc/holiday/Sche-Hd-0000-00-00-000000.utf8'
 set timeout timeoutlen=3000 ttimeoutlen=100
+
+" ext
+command! ParseXML %s/></>\r</g | filetype indent on | setf xml | normal gg=G
