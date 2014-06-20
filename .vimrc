@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-"Plugin 'YankRing.vim'
 Plugin 'taglist.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'project.tar.gz'
@@ -15,6 +14,20 @@ Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc'
 Plugin 'hotchpotch/perldoc-vim'
 Plugin 'git://github.com/fuenor/qfixhowm'
+
+Plugin 'airblade/vim-gitgutter'
+nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
+Plugin 'LeafCage/yankround.vim'
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+xmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
 
 call vundle#end()
 filetype plugin indent on
