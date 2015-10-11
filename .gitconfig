@@ -1,14 +1,17 @@
 [user]
-	name = mokemoko
-	email = mokemoko331@gmail.com
+  name  = mokemoko
+  email = mokemoko331@gmail.com
 [alias]
-	co = checkout
-	st = status -sb
-	ci  = commit
-  b = branch
-	l  = log --decorate
+  co = checkout
+  st = status -sb
+  ci = commit
+  b  = branch
+  l  = log --decorate
+  tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [core]
-	editor = vim
+  editor = vim
+  autocrlf = false
+  excludesfile = .gitignore_global
 [color]
-	diff = auto
-	status = auto
+  diff   = auto
+  status = auto

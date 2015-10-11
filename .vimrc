@@ -1,19 +1,25 @@
-"NeoBundle Scripts-----------------------------
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
   " Required:
-  set runtimepath+=/Users/astana/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/astana/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Add or remove your Bundles here:
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
@@ -21,13 +27,26 @@ NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimproc.vim', {
+\   'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\   },
+\ }
+
+" for Mac only
+if has("macos")
+  NeoBundle 'kannokanno/previm'
+  NeoBundle 'tyru/open-browser.vim'
+endif
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
-" Required:
 call neobundle#end()
 
 " Required:
@@ -36,11 +55,8 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-"End NeoBundle Scripts-------------------------
-
 
 syntax on
-"set term=screen-256color
 set number
 set hidden
 
@@ -73,5 +89,5 @@ endfunction
 " ext
 command! ParseXML %s/></>\r</g | filetype indent on | setf xml | normal gg=G
 
-" md
 let g:vim_markdown_folding_disabled=1
+let g:vimshell_interactive_update_time=1000
