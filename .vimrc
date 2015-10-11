@@ -1,23 +1,43 @@
-set nocompatible
-filetype off
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+  " Required:
+  set runtimepath+=/Users/astana/.vim/bundle/neobundle.vim/
+endif
 
-Plugin 'gmarik/Vundle.vim'
+" Required:
+call neobundle#begin(expand('/Users/astana/.vim/bundle'))
 
-"Plugin 'YankRing.vim'
-Plugin 'taglist.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'project.tar.gz'
-Plugin 'tpope/vim-surround'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc'
-Plugin 'hotchpotch/perldoc-vim'
-Plugin 'git://github.com/fuenor/qfixhowm'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-call vundle#end()
+" Add or remove your Bundles here:
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'hotchpotch/perldoc-vim'
+NeoBundle 'taglist.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
+
 
 syntax on
 "set term=screen-256color
@@ -31,8 +51,11 @@ set ts=2 sw=2 sts=2
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 
 set ambiwidth=double
+
+set fileencodings=utf-8,cp932,euc-jp,default,latin,ucs-bom,iso-2022-jp
 
 let Tlist_Use_Horiz_Window = 1
 
@@ -47,15 +70,8 @@ function! s:Jq(...)
     execute "%! jq " . l:arg
 endfunction
 
-" QFixHown
-let QFixHowm_Key = 'g'
-let howm_dir             = '~/Dropbox/howm'
-let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
-let howm_fileencoding    = 'utf-8'
-let howm_fileformat      = 'unix'
-let QFixWin_EnableMode = 1
-let QFixHowm_HolidayFile = '~/.vim/bundle/qfixhowm/misc/holiday/Sche-Hd-0000-00-00-000000.utf8'
-set timeout timeoutlen=3000 ttimeoutlen=100
-
 " ext
 command! ParseXML %s/></>\r</g | filetype indent on | setf xml | normal gg=G
+
+" md
+let g:vim_markdown_folding_disabled=1
