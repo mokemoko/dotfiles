@@ -15,3 +15,6 @@ alias ls='ls -G'
 alias ll='ls -la'
 alias la='ls -a'
 alias screen='screen -U -D -RR'
+
+stty start undef
+stty stop undef
