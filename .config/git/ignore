@@ -1,0 +1,7 @@
+.DS_STORE
+
+.idea/
+
+**/.claude/settings.local.json
+mise.local.toml
+config.local.toml

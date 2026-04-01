@@ -1,0 +1,10 @@
+---
+- defaults:
+    link:
+      create: true
+- link:
+    ~/.config/mise: .config/mise
+    ~/.config/pnpm: .config/pnpm
+    ~/.config/uv: .config/uv
+    ~/.npmrc: .npmrc
+    ~/.tmux.conf: .tmux.conf
