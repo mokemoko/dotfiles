@@ -1,5 +1,0 @@
-[tasks.init]
-run = "uv tool install dotbot"
-
-[tasks.link]
-run = "dotbot -c install.conf.yaml"

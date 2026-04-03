@@ -8,3 +8,4 @@
     ~/.config/uv: .config/uv
     ~/.npmrc: .npmrc
     ~/.tmux.conf: .tmux.conf
+    ~/.vimrc: .vimrc

@@ -8,6 +8,7 @@ node = "latest"
 pnpm = "latest"
 python = "latest"
 uv = "latest"
+just = "latest"
 
 [env]
 TF_PLUGIN_CACHE_DIR = "{{ env.HOME }}/.terraform.d/plugin-cache"
