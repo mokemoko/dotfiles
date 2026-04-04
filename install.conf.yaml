@@ -3,6 +3,7 @@
     link:
       create: true
 - link:
+    ~/.claude/settings.json: .claude/settings.json
     ~/.config/mise: .config/mise
     ~/.config/pnpm: .config/pnpm
     ~/.config/uv: .config/uv
