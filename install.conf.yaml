@@ -4,6 +4,7 @@
       create: true
 - link:
     ~/.claude/settings.json: .claude/settings.json
+    ~/.claude/statusline.py: .claude/statusline.py
     ~/.config/mise: .config/mise
     ~/.config/pnpm: .config/pnpm
     ~/.config/uv: .config/uv
