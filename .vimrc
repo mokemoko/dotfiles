@@ -245,7 +245,7 @@ cnoreabbrev Qall qall
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['node_modules','\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let g:NERDTreeIgnore=['node_modules','\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__', '\.swp']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
@@ -401,12 +401,7 @@ endif
 
 "" Buffer nav
 noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
-
-"" Close buffer
-noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -482,6 +477,7 @@ else
 endif
 
 " additional
+" customize NERDTree
 nnoremap <C-n> :NERDTree<CR>
 let NERDTreeWinSize=26
 let NERDTreeShowHidden=1
@@ -492,3 +488,10 @@ augroup nerdtree
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 augroup END
+ 
+" clipboard sync yank
+noremap gy "+y
+
+" close buffer only
+nnoremap <silent> <Leader>d :execute (winnr('$') == 1 ? 'bd' : 'bp \| bd #')<CR>
+
