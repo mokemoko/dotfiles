@@ -1,14 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "language": "japanese",
-  "statusLine": {
-    "type": "command",
-    "command": "python3 ~/.claude/statusline.py"
-  },
-  "skipDangerousModePermissionPrompt": true,
-  "permissions": {
-    "defaultMode": "acceptEdits"
-  },
   "env": {
     "ENABLE_TOOL_SEARCH": "1",
     "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
@@ -16,5 +7,15 @@
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "DISABLE_EXTRA_USAGE_COMMAND": "1",
     "DISABLE_AUTO_COMPACT": "1"
-  }
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "python3 ~/.claude/statusline.py"
+  },
+  "language": "japanese",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto"
 }
