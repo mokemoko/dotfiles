@@ -1,0 +1,23 @@
+[alias]
+  ci = commit
+  co = checkout
+  st = status -sb
+  b = branch
+  f = fetch
+  tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+[user]
+  name = mokemoko
+  email = mokemoko331@gmail.com
+[ghq]
+  root = ~/repo
+[includeIf "gitdir:~/repo/github.com.monet/"]
+  path = ~/repo/github.com.monet/.gitconfig
+[pager]
+  diff = delta
+  log = delta
+[delta]
+  navigate = true
+  #dark = true
+[interactive]
+  diffFilter = delta --color-only
+
