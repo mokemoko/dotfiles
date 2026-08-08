@@ -6,7 +6,7 @@ minimum_release_age = "3d"
 [tools]
 go = "latest"
 node = "latest"
-npm = "latest"
+"aqua:npm/cli" = "latest"
 pnpm = "latest"
 python = "latest"
 uv = "latest"
